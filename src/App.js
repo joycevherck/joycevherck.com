@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.scss';
+import Friday from './projects/friday.png';
+import NuffieldOLJ from './projects/nuffield-olj.png';
+import PBX from './projects/pbx.png';
 
 function App() {
   return (
@@ -10,90 +13,72 @@ function App() {
         </div>
       </aside>
       <main className="content">
-        <h2>About</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Pellentesque nec mauris in magna mattis suscipit ac vitae mauris.
-          Quisque pretium erat sed posuere pellentesque. Praesent blandit
-          congue diam, at rhoncus nisl finibus rhoncus. Suspendisse eu ante
-          erat. Orci varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. Nulla eu malesuada ex, at rhoncus mi. Nulla
-          facilisi. Ut placerat, tellus ut hendrerit posuere, orci lectus
-          iaculis tellus, quis sagittis eros ex in metus. Nulla erat ipsum,
-          sollicitudin non elementum tincidunt, faucibus non sapien. Curabitur
-          sollicitudin sollicitudin libero at rhoncus. Nulla sed risus quis
-          quam finibus efficitur eu quis arcu. Donec pretium scelerisque leo
-          vel accumsan.
-        </p>
-        <p>
-          Nullam lobortis justo euismod enim ullamcorper malesuada. Sed
-          dignissim mollis enim a auctor. Nullam porta odio quis est porttitor
-          rutrum. Phasellus vitae facilisis quam. Sed id viverra lorem, vel
-          fringilla arcu. Pellentesque eleifend lorem lacus, ut ultrices odio
-          rhoncus non. Proin egestas justo in lobortis dictum.
-        </p>
-        <p>
-          Vestibulum quam tortor, finibus in euismod ut, hendrerit sed urna.
-          Fusce porta, augue ac faucibus scelerisque, magna mauris porta diam,
-          ac vestibulum est felis at nunc. Vivamus eget sodales purus, non
-          pretium ante. Nunc quis porttitor ipsum. Nunc leo ligula, feugiat ut
-          congue id, pulvinar nec ex. Cras posuere, quam non ornare convallis,
-          lorem magna iaculis ex, ac scelerisque nibh enim vel nulla. Sed non
-          sollicitudin erat. Curabitur nec arcu vel arcu efficitur pharetra.
-          Sed vulputate dolor nec magna molestie, quis tristique dui auctor.
-          Suspendisse turpis orci, fringilla sed turpis ac, venenatis ornare
-          mi. Ut scelerisque erat sit amet orci suscipit porta. Nullam vel
-          urna sit amet massa fermentum porta et sed sapien. Duis finibus nisi
-          ut tellus lacinia, fermentum volutpat leo rutrum. Nulla tincidunt
-          ligula et nulla pellentesque scelerisque. Proin congue arcu quis
-          nibh consectetur hendrerit. Praesent nec velit velit.
-        </p>
-        <p>
-          In luctus magna quis metus pretium fringilla. Sed euismod tortor sit
-          amet augue ornare rhoncus a a arcu. Phasellus nec sodales tortor.
-          Curabitur vulputate finibus dui, sit amet aliquet diam elementum et.
-          Quisque vitae lacus diam. Vestibulum at est arcu. Fusce finibus ut
-          nisi sed iaculis. Suspendisse potenti. Suspendisse potenti. Sed
-          venenatis nisl vel semper posuere. Morbi non euismod metus.
-        </p>
-        <p>
-          Maecenas metus sem, ullamcorper a laoreet ac, feugiat sit amet eros.
-          Ut mattis ex ac augue placerat, ut venenatis ante scelerisque. Sed
-          ullamcorper dolor porttitor, ultrices nulla vehicula, consectetur
-          nibh. Integer malesuada tortor eu orci dignissim pretium. Mauris nec
-          blandit libero. Nunc vestibulum sapien ut molestie vulputate.
-          Praesent vel vulputate mauris. Nunc elit neque, vulputate at lectus
-          id, hendrerit vestibulum nisi. Pellentesque ante nunc, blandit in
-          luctus ac, sodales hendrerit eros. Aenean urna elit, luctus a arcu
-          quis, blandit semper magna. Etiam risus erat, pellentesque ac
-          gravida in, lacinia in arcu. Morbi molestie hendrerit dui. Maecenas
-          commodo, augue vel mattis finibus, est metus pulvinar augue, vitae
-          suscipit urna justo nec risus. In aliquam non ligula a placerat.
-          Quisque leo metus, pulvinar id odio vitae, convallis condimentum
-          dui.
-        </p>
-        <h2>Projects</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Pellentesque nec mauris in magna mattis suscipit ac vitae mauris.
-          Quisque pretium erat sed posuere pellentesque. Praesent blandit
-          congue diam, at rhoncus nisl finibus rhoncus. Suspendisse eu ante
-          erat. Orci varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. Nulla eu malesuada ex, at rhoncus mi. Nulla
-          facilisi. Ut placerat, tellus ut hendrerit posuere, orci lectus
-          iaculis tellus, quis sagittis eros ex in metus. Nulla erat ipsum,
-          sollicitudin non elementum tincidunt, faucibus non sapien. Curabitur
-          sollicitudin sollicitudin libero at rhoncus. Nulla sed risus quis
-          quam finibus efficitur eu quis arcu. Donec pretium scelerisque leo
-          vel accumsan.
-        </p>
-        <p>
-          Nullam lobortis justo euismod enim ullamcorper malesuada. Sed
-          dignissim mollis enim a auctor. Nullam porta odio quis est porttitor
-          rutrum. Phasellus vitae facilisis quam. Sed id viverra lorem, vel
-          fringilla arcu. Pellentesque eleifend lorem lacus, ut ultrices odio
-          rhoncus non. Proin egestas justo in lobortis dictum.
-        </p>
+        <div className="fullWidth">
+          <h2>
+            👩🏼‍💻 🏋🏼‍♀️ 🦹🏼‍♀️ 🍟 💂🏼‍♂️
+            <br />
+            I write code. I&apos;m a CrossFitter and a cosplayer. I&apos;m a Belgian in London.
+          </h2>
+          <p>
+            I&apos;m a Frontend Developer with over 5 years of experience. For the past couple years I&apos;ve mostly been working on React projects.
+          </p>
+          <p>
+            <span class="socialLink">@<a href="https://twitter.com/joycevherck">joycevherck</a></span>
+          </p>
+          <h2>
+            👩🏼‍💻
+            <br />
+            Projects
+          </h2>
+        </div>
+        <div className="spacer" />
+
+        <div className="projectImage">
+          <img src={PBX} alt="Screenshot of photobox.com" />
+        </div>
+        <div className="projectDetails">
+          <h3>Photobox</h3>
+          <p>
+            The Friday/PA team helped the Photobox in-house dev team to move their old website onto a new stack using <span>React</span> and <span>GraphQL</span>.
+          </p>
+          <p>
+            As part of my role I helped set up a grid system using <span>CSS Grid</span>. We used mixins so that it could easily be used be other teams across the business. I also helped set up font rules and branding in a way that it could easily be replaced with branding of the sister companies of the Photobox Group.
+          </p>
+        </div>
+
+        <div className="projectImage">
+          <img src={NuffieldOLJ} alt="Screenshot of join.nuffieldhealth.com" />
+        </div>
+        <div className="projectDetails">
+          <h3>Nuffield Health gym joining</h3>
+          <p>In 2016 we first built Nuffield Health&apos;s online gym joining platform. Prior to this you couldn't join a Nuffield gym online. Gym joining has since had a few interations, all of which I was a part of.</p>
+          <p>
+            The site is built on a Ruby on Rails backend. The frontend is using a more traditional setup using HTML, scss and <span>JavaScript</span>.
+          </p>
+        </div>
+
+        <div className="projectImage">
+          <img src={Friday} alt="Screenshot of wearefriday.com" />
+        </div>
+        <div className="projectDetails">
+          <h3>We Are Friday</h3>
+          <p>
+            The Friday website was built using Craft CMS, <span>CSS Grid</span>, <span>clip-path</span> and ES6.
+          </p>
+          <p>
+            I worked closely with the designers in order to create a pixel perfect result.
+          </p>
+        </div>
+
+        {/* <div className="fullWidth">
+          <h2>
+            🦹🏼‍♀️
+            <br />
+            Cosplayer
+          </h2>
+          <p>"The practice of dressing up as a character from a film, book, or video game."</p>
+        </div>
+        <div className="spacer" /> */}
       </main>
     </div>
   );

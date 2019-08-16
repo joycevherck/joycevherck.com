@@ -1,6 +1,4 @@
 .container {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #333;
   min-height: 100vh;
   position: relative;
   display: grid;
@@ -9,6 +7,8 @@
   box-sizing: border-box;
   color: white;
   font-size: 18px;
+  // max-width: 995px;
+
 
   p {
     line-height: 1.4;
@@ -48,27 +48,96 @@
 }
 
 .content {
-  grid-column: 5 / span 7;
-  padding: 80px 0 40px;
+  grid-column: 4 / span 8;
+  padding: 40px 0;
+
+  display: grid;
+  grid-column-gap: 16px;
+  grid-template-columns: repeat(8, 1fr);
 
   @media (max-width: 400px) {
     grid-column: 4 / span 8;
   }
 
   h2 {
-    padding-left: 40px;
+    margin-top: 80px;
+    padding-left: 20px;
     position: relative;
-    left: -40px;
+    left: -20px;
 
     &:before {
       content: '';
       background-color: #fff;
       display: block;
-      width: 20px;
-      height: 1px;
-      position: relative;
-      left: -40px;
-      top: 15px;
+      width: 1px;
+      height: 90px;
+      position: absolute;
+      top: -30px;
+      left: 0;
+    }
+  }
+}
+
+.fullWidth {
+  grid-column: 2 / span 4;
+}
+
+.spacer {
+  grid-column-end: span 3;
+}
+
+.projectImage {
+  grid-column: 1 / span 3;
+  margin-bottom: 40px;
+  position: relative;
+
+  &:before {
+    content: '';
+    background-color: #fff;
+    display: block;
+    width: 110%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.projectDetails {
+  grid-column-end: span 3;
+  font-size: 16px;
+  padding-left: 40px;
+
+  h3 {
+    margin-top: -4px;
+  }
+
+  span {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+    font-size: 14px;
+    background-color: #e4e4e4;
+    border: 1px solid #888888;
+    color: #333;
+    border-radius: 3px;
+    padding: 0 3px;
+    display: inline-block;
+  }
+}
+
+.socialLink {
+  font-weight: bold;
+
+  a {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 }
