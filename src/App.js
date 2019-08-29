@@ -3,14 +3,19 @@ import './App.scss';
 import Friday from './projects/friday.png';
 import NuffieldOLJ from './projects/nuffield-olj.png';
 import PBX from './projects/pbx.png';
+import Editor from './projects/pbx-editor.png';
 
 function App() {
   return (
     <div className="container">
       <aside className="sidebar">
-        <div className="sidebarWrapper">
-          <header className="header">Joyce Van Herck</header>
-        </div>
+        <header className="header">
+          Joyce
+          <br />
+          Van
+          <br />
+          Herck
+        </header>
       </aside>
       <main className="content">
         <div className="fullWidth">
@@ -20,10 +25,16 @@ function App() {
             I write code. I&apos;m a CrossFitter and a cosplayer. I&apos;m a Belgian in London.
           </h2>
           <p>
-            I&apos;m a Frontend Developer with over 5 years of experience. For the past couple years I&apos;ve mostly been working on React projects.
+            I&apos;m a Frontend Developer with over 5 years of experience. I started building website in secondary school using tables but I have since learnt better and CSS Grid is now my layouting method of choice.
           </p>
+          <p>I have a passion for creating pixel perfect websites, UX and accessibility.</p>
           <p>
-            <span class="socialLink">@<a href="https://twitter.com/joycevherck">joycevherck</a></span>
+            <span className="socialLink">
+              <a href="https://twitter.com/joycevherck" title="Joyce's Twitter">🐦</a>
+            </span>
+            <span className="socialLink">
+              <a href="https://www.instagram.com/joycevherck/" title="Joyce's Instagram">📸</a>
+            </span>
           </p>
           <h2>
             👩🏼‍💻
@@ -43,6 +54,25 @@ function App() {
           </p>
           <p>
             As part of my role I helped set up a grid system using <span>CSS Grid</span>. We used mixins so that it could easily be used be other teams across the business. I also helped set up font rules and branding in a way that it could easily be replaced with branding of the sister companies of the Photobox Group.
+          </p>
+          <p>
+            As we were working on a live site as part of the client's development team we continuously deployed features as soon as they were built and tested.
+          </p>
+        </div>
+
+        <div className="projectImage">
+          <img src={Editor} alt="Screenshot of the Photobox editor" />
+        </div>
+        <div className="projectDetails">
+          <h3>Photobox Editor</h3>
+          <p>
+            Photobox's old photo editor was still running on Flash and with many browsers no longer supporting Flash it was time to update it to a more modern stack with <span>React</span>.
+          </p>
+          <p>
+            I joined the team during the last two months before handover so I had to quickly get up to speed with a complex code base.
+          </p>
+          <p>
+            I used my expertise from the main Photobox website to set up branding for the editor so that it could also be used for their sister companies. I also implemented a couple of new features like swapping images.
           </p>
         </div>
 
