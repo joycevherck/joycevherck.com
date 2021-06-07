@@ -20,22 +20,14 @@ function App() {
       <main className="content">
         <div className="fullWidth">
           <h2>
-            👩🏼‍💻 🏋🏼‍♀️ 🦹🏼‍♀️ 🍟 💂🏼‍♂️
+            👩🏼‍💻 🏋🏼‍♀️ 🦮 🍟 💂🏼‍♂️
             <br />
-            I write code. I&apos;m a CrossFitter and a cosplayer. I&apos;m a Belgian in London.
+            I write code. I&apos;m a CrossFitter and dog mama. I&apos;m a Belgian in the UK.
           </h2>
           <p>
-            I&apos;m a Frontend Developer with over 5 years of experience. I started building website in secondary school using tables but I have since learnt better and CSS Grid is now my layouting method of choice.
+            I&apos;m a Frontend Developer with over 6 years of experience. I started building website in secondary school using tables but I have since learnt better and CSS Grid is now my layouting method of choice.
           </p>
-          <p>I have a passion for creating pixel perfect websites, UX and accessibility.</p>
-          <p>
-            <span className="socialLink">
-              <a href="https://twitter.com/joycevherck" title="Joyce's Twitter">🐦</a>
-            </span>
-            <span className="socialLink">
-              <a href="https://www.instagram.com/joycevherck/" title="Joyce's Instagram">📸</a>
-            </span>
-          </p>
+          <p>I have a passion for creating pixel perfect websites, accessibility and anything JavaScript.</p>
           <h2>
             👩🏼‍💻
             <br />
