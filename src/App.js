@@ -4,6 +4,8 @@ import Friday from './projects/friday.png';
 import NuffieldOLJ from './projects/nuffield-olj.png';
 import PBX from './projects/pbx.png';
 import Editor from './projects/pbx-editor.png';
+import SMARTY from './projects/smarty.png';
+import CfH from './projects/cards-for-humanity.png';
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
       <main className="content">
         <div className="fullWidth">
           <h2>
-            👩🏼‍💻 🏋🏼‍♀️ 🦮 🍟 💂🏼‍♂️
+            <span role="img" aria-label="Emoji of woman using laptop">👩🏼‍💻 </span>
+            <span role="img" aria-label="Emoji of woman weightlifting">🏋🏼‍♀️ </span>
+            <span role="img" aria-label="Emoji of dog on a lead">🦮 </span>
+            <span role="img" aria-label="Fries emoji">🍟 </span>
+            <span role="img" aria-label="Guard emoji">💂🏼‍♂️</span>
             <br />
             I write code. I&apos;m a CrossFitter and dog mama. I&apos;m a Belgian in the UK.
           </h2>
@@ -29,12 +35,41 @@ function App() {
           </p>
           <p>I have a passion for creating pixel perfect websites, accessibility and anything JavaScript.</p>
           <h2>
-            👩🏼‍💻
+            <span role="img" aria-label="Emoji of woman using laptop">👩🏼‍💻</span>
             <br />
             Projects
           </h2>
         </div>
         <div className="spacer" />
+
+        <div className="projectImage">
+          <img src={CfH} alt="Screenshot of Cards for Humanity" />
+        </div>
+        <div className="projectDetails">
+          <h3>Cards for Humanity</h3>
+          <p>
+            Cards for Humanity is an inclusive design tool. It started as a set of physical cards that the Idean team created for workshops with clients and in 2020 I helped bring the cards online.
+          </p>
+          <p>
+            The site is built using <span>create-react-app</span>. My initial contribution was to help build the UI and fine tune the animations.
+          </p>
+          <p>
+            In the second phase I made the website into a <span>Progressive Web App</span>.
+          </p>
+        </div>
+
+        <div className="projectImage">
+          <img src={SMARTY} alt="Screenshot of smarty.co.uk" />
+        </div>
+        <div className="projectDetails">
+          <h3>SMARTY</h3>
+          <p>
+            We continuously built new features for SMARTY customers based on user feedback. The site is built using a combination of <span>Gatbsy</span> for the marketing site and <span>React</span> with Ruby on Rails for the order and user account journeys.
+          </p>
+          <p>
+            When I joined the team I helped set up a better release process using <span>git flow</span>. I also took ownership of <span>accessibility</span> by introducting standards into the dev and QA process while also implementing numerous fixes based on an accessibility report.
+          </p>
+        </div>
 
         <div className="projectImage">
           <img src={PBX} alt="Screenshot of photobox.com" />
@@ -48,7 +83,7 @@ function App() {
             As part of my role I helped set up a grid system using <span>CSS Grid</span>. We used mixins so that it could easily be used be other teams across the business. I also helped set up font rules and branding in a way that it could easily be replaced with branding of the sister companies of the Photobox Group.
           </p>
           <p>
-            As we were working on a live site as part of the client's development team we continuously deployed features as soon as they were built and tested.
+            As we were working on a live site as part of the client&apos;s development team we continuously deployed features as soon as they were built and tested.
           </p>
         </div>
 
@@ -58,7 +93,7 @@ function App() {
         <div className="projectDetails">
           <h3>Photobox Editor</h3>
           <p>
-            Photobox's old photo editor was still running on Flash and with many browsers no longer supporting Flash it was time to update it to a more modern stack with <span>React</span>.
+            Photobox&apos;s old photo editor was still running on Flash and with many browsers no longer supporting Flash it was time to update it to a more modern stack with <span>React</span>.
           </p>
           <p>
             I joined the team during the last two months before handover so I had to quickly get up to speed with a complex code base.
@@ -73,7 +108,7 @@ function App() {
         </div>
         <div className="projectDetails">
           <h3>Nuffield Health gym joining</h3>
-          <p>In 2016 we first built Nuffield Health&apos;s online gym joining platform. Prior to this you couldn't join a Nuffield gym online. Gym joining has since had a few interations, all of which I was a part of.</p>
+          <p>In 2016 we first built Nuffield Health&apos;s online gym joining platform. Prior to this you couldn&apos;t join a Nuffield gym online. Gym joining has since had a few interations, all of which I was a part of.</p>
           <p>
             The site is built on a Ruby on Rails backend. The frontend is using a more traditional setup using HTML, scss and <span>JavaScript</span>.
           </p>
@@ -92,15 +127,6 @@ function App() {
           </p>
         </div>
 
-        {/* <div className="fullWidth">
-          <h2>
-            🦹🏼‍♀️
-            <br />
-            Cosplayer
-          </h2>
-          <p>"The practice of dressing up as a character from a film, book, or video game."</p>
-        </div>
-        <div className="spacer" /> */}
       </main>
     </div>
   );
