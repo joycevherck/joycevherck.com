@@ -1,6 +1,6 @@
 # joycevherck.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pretty simple personal website showing off my latest work.
 
 ## Available Scripts
 
