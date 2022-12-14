@@ -8,32 +8,34 @@ import SMARTY from './projects/smarty.png';
 import CfH from './projects/cards-for-humanity.png';
 
 function App() {
+  const now = new Date().getFullYear();
+  const start = new Date('2014').getFullYear();
+
   return (
     <div className="container">
       <aside className="sidebar">
         <header className="header">
-          Joyce
-          <br />
-          Van
-          <br />
-          Herck
+          <h1>
+            Joyce
+            <br />
+            Van
+            <br />
+            Herck
+          </h1>
         </header>
       </aside>
       <main className="content">
         <div className="fullWidth">
           <h2>
-            <span role="img" aria-label="Emoji of woman using laptop">👩🏼‍💻 </span>
-            <span role="img" aria-label="Emoji of woman weightlifting">🏋🏼‍♀️ </span>
-            <span role="img" aria-label="Emoji of dog on a lead">🦮 </span>
-            <span role="img" aria-label="Fries emoji">🍟 </span>
-            <span role="img" aria-label="Guard emoji">💂🏼‍♂️</span>
+            <span role="img" aria-label="Sparkle emoji">✨ </span>
             <br />
-            I write code. I&apos;m a CrossFitter and dog mama. I&apos;m a Belgian in the UK.
+            CSS, accessibility and a side of JavaScript
           </h2>
           <p>
-            I&apos;m a Frontend Developer with over 6 years of experience. I started building website in secondary school using tables but I have since learnt better and CSS Grid is now my layouting method of choice.
+            {/* since 2014 */}
+            Hi, I&apos;m Joyce Van Herck. I&apos;m a Frontend Developer with {now - start} years of experience. I have extensive experience working both in agencies and product companies working with a variety of JS libraries and frameworks.
           </p>
-          <p>I have a passion for creating pixel perfect websites, accessibility and anything JavaScript.</p>
+          <p>I have a passion inclusive, accessibility internet. I also love CSS and am always on the look out for new specs being released.</p>
           <h2>
             <span role="img" aria-label="Emoji of woman using laptop">👩🏼‍💻</span>
             <br />
