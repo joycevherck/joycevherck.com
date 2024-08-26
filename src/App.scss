@@ -1,5 +1,17 @@
-$primary: #e39797;
-$white: #333;
+$textColor: #333;
+$gray: #373737;
+
+$primary: #FFCAE9;
+$secondary: #FA9BCF;
+$tertiary: #F4DBE9;
+$quartiary: #FFF0F1;
+$highlight: #CDD0F8;
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
 
 .container {
   min-height: 100vh;
@@ -8,7 +20,7 @@ $white: #333;
   grid-gap: 16px;
   grid-template-columns: repeat(12, 1fr);
   box-sizing: border-box;
-  color: $white;
+  color: $textColor;
   font-size: 18px;
 
   p {
@@ -16,56 +28,120 @@ $white: #333;
   }
 }
 
-.sidebar {
-  grid-column-end: span 3;
-  margin-top: 20px;
-
-  @media (max-width: 1000px) {
-    grid-column-end: span 6;
-  }
-
-  @media (max-width: 600px) {
-    grid-column-end: span 12;
-  }
-}
-
 .header {
-  color: $primary;
-  font-size: 47px;
-  line-height: .9;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 15px;
-  padding-top: 12px;
-  padding-left: 6px;
-  position: relative;
-  background-color: $white;
-  width: 250px;
-  height: 250px;
-  clip-path: polygon(0 0, 100% 10%, 10% 100%, 0 0);
-  transition: clip-path 250ms ease-in-out;
-
-  &:hover,
-  &:focus {
-    clip-path: polygon(0 0, 100% 0, 20% 100%, 0 0);
-  }
-
+  grid-column-end: span 6;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  padding-left: 1.5rem;
+  text-align: right;
+  
   h1 {
-    font-size: 47px;
+    font-size: 300px;
+    font-weight: 700;
     line-height: .9;
     margin: 0;
     padding: 0;
   }
+
+  @media (max-width: 600px) {
+    grid-column-end: span 12;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    h1 {
+      font-size: 80vw;
+    }
+  }
+}
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: $textColor;
+  background-image: linear-gradient(
+      45deg,
+      $primary 0%, 
+      $secondary 50%, 
+      $tertiary 100%, 
+  );
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+.sidebar {
+  grid-column-end: span 4;
+  margin-top: 100px;
+  
+  @media (max-width: 1000px) {
+    grid-column-end: span 6;
+    margin-top: 50px;
+    padding-right: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    grid-column: 2 / span 10;
+    margin-top: 0;
+    padding: 0;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
 }
 
 .content {
-  grid-column: 4 / span 8;
+  grid-column: 2 / span 10;
   padding: 40px 0;
 
   display: grid;
   grid-column-gap: 16px;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
 
   @media (max-width: 1000px) {
     grid-column: 2 / span 10;
@@ -73,29 +149,12 @@ $white: #333;
   }
 
   h2 {
-    margin-top: 80px;
-    padding-left: 20px;
-    position: relative;
-    left: -20px;
-
-    &:before {
-      content: '';
-      clip-path: polygon(0 0, 100% 20%, 30% 100%, 0 0);
-      background-color: #fff;
-      display: block;
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      top: 15px;
-      left: 0;
-      z-index: -1;
-      opacity: .1;
-    }
+    margin-top: 30px;
   }
 }
 
 .fullWidth {
-  grid-column: 2 / span 4;
+  grid-column: 2 / span 8;
 
   @media (max-width: 1250px) {
     grid-column: 2 / span 5;
@@ -110,19 +169,52 @@ $white: #333;
   }
 }
 
-.spacer {
-  grid-column-end: span 3;
+.project {
+  grid-column: span 5;
 
-  @media (max-width: 1250px) {
-    grid-column: span 2;
+  @media (max-width: 600px) {
+    grid-column: span 10;
+  }
+
+  .projectDetails {
+    background-color: $quartiary;
+  }
+
+  &:nth-child(2n+3) {
+    margin-top: -100px;
+
+    @media (max-width: 600px) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(3n+2) {
+    .projectDetails {
+      background-color: $tertiary;
+    }
+  }
+
+  &:nth-child(3n+3) {
+    .projectDetails {
+      background-color: $highlight;
+    }
   }
 }
 
 .projectImage {
+  position: relative;
+  z-index: 1;
   grid-column: 1 / span 3;
   clip-path: polygon(
-    0 0, 100% 0, 100% 90%, 0 60%
+    0 5%, 100% 0, 100% 96%, 0 99%
   );
+
+  @media (max-width: 1000px) {
+    max-height: 300px;
+    clip-path: polygon(
+    0 10%, 100% 0, 100% 89%, 0 99%
+  );
+  }
 
   @media (max-width: 600px) {
     grid-column: 3 / span 6;
@@ -135,9 +227,14 @@ $white: #333;
 }
 
 .projectDetails {
+  position: relative;
+  top: -4rem;
   grid-column-end: span 3;
   font-size: 16px;
-  padding-top: 10px;
+  padding: 5rem 1.2rem 1rem 1.2rem;
+  clip-path: polygon(
+    0 0, 100% 0, 100% 93%, 0 100%
+  );
 
   @media (max-width: 1250px) {
     grid-column-end: span 4;
@@ -145,55 +242,85 @@ $white: #333;
 
   @media (max-width: 1000px) {
     grid-column-end: span 5;
+    top: 0;
   }
 
   @media (max-width: 600px) {
     grid-column: 1 / span 7;
-    margin-bottom: 40px;
+    padding-bottom: 2rem;
+    clip-path: polygon(
+      0 0, 100% 0, 100% 95%, 0 100%
+    );
   }
 
   h3 {
     margin-top: -4px;
   }
+}
 
-  span {
+p span,
+.projectDetails span {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+  font-size: 14px;
+  background-color: rgba($primary, 0.5);
+  border: 1px solid rgba($secondary, 0.5);
+  color: #333;
+  border-radius: 3px;
+  padding: 0 3px;
+  display: inline-block;
+}
+
+footer {
+  grid-column: 2 / span 10;
+  padding-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  a {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
     font-size: 14px;
-    background-color: #e4c3c3;
-    border: 1px solid #4e1717;
+    background-color: rgba($primary, 0.5);
+    border: 1px solid rgba($secondary, 0.5);
     color: #333;
     border-radius: 3px;
-    padding: 0 3px;
+    padding: 3px 5px;
     display: inline-block;
-  }
-}
-
-.socialLink {
-  a {
-    text-decoration: none;
-    background-color: $white;
-    padding: 8px 6px 8px 9px;
-    margin-right: 5px;
-    display: inline-block;
-    transition: clip-path 250ms ease-in-out;
-  }
-
-  &:first-child a {
-    clip-path: polygon(0 0, 100% 35%, 30% 100%, 0 0);
 
     &:hover,
     &:focus {
-      clip-path: polygon(20% 0, 100% 55%, 10% 100%, 20% 0);
+      text-decoration: none;
     }
   }
 
-  &:last-child a {
-    clip-path: polygon(55% 0, 100% 90%, 0 70%, 55% 0);
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &:hover,
-    &:focus {
-      clip-path: polygon(75% 0, 80% 90%, 0 50%, 75% 0);
+  span {
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    font-style: normal;
+    width: 50%;
+    text-align: right;
+
+    @media (max-width: 600px) {
+      font-size: 4rem;
+      width: auto;
     }
   }
 }
